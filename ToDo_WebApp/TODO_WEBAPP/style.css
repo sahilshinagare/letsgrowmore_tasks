@@ -1,0 +1,128 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+    margin-top: 40px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+    color: rgb(83, 35, 35);
+    text-shadow: 1px 1px 10px white;
+    transition: all 1s ease-in-out;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+h1:hover{
+    letter-spacing: 5px;
+    transform: scale(105%);
+}
+h1 img{
+    margin-right: 10px;
+    /* font-size: 30px; */
+}
+.todo{
+    width: 50%;
+    border: 2px solid white;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 1px 1px 20px black;
+}
+.input{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#text{
+    width: 500px;
+    padding: 10px 20px;
+    /* margin: 10px ; */
+    transition: all 0.2s ease-in;
+}
+#text::placeholder{
+    color: black;
+    opacity: 0.5;
+    text-transform: uppercase;
+    font-family: monospace;
+}
+input[type=text]:focus{
+    /* border-radius: 10px */
+    transform:scale(102%);
+    border: 2px solid #555;
+    outline: none;
+}
+#btn{
+    padding: 10px 20px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.568);
+    color: white;
+    transition: all 0.2s ease-in;
+    /* margin: 10px; */
+}
+#btn:hover{
+    background-color: grey;
+    color: white;
+    transform: scale(102%);
+}
+
+.items{
+    padding: 5px 5px;
+    margin: 5px 5px;
+    display: flex;
+    flex-direction: column;
+}
+.list{
+    /* margin: 10px 0px; */
+}
+li{ 
+    list-style:circle;
+    list-style-position: inside;
+    padding: 10px 5px;
+    border-bottom: 0.2px solid rgb(197, 196, 196);
+    overflow: auto;
+    transition: all 0.2s ease-in-out;
+}
+li:hover{
+    background: gray;
+    transform: scale(102%);
+    color: white;
+    border-radius: 5px;
+}
+p{  
+    font-family: monospace;
+    padding-bottom: 5px;
+    /* border-bottom: 1px solid grey; */
+    margin-bottom: 10px;
+    text-align: center;
+    
+}
+@media (max-width:600px){
+    .input{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        margin: auto;
+    }
+    
+    #text{
+        width: 90%;
+        margin-bottom: 3%;
+    }
+    .todo{
+        width: 85%;
+        border: 2px solid white;
+        margin: 50px auto;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        box-shadow: 1px 1px 10px black;
+    }
+}
+
